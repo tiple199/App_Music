@@ -3,16 +3,103 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/login_acc">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="68dp"
+            android:layout_height="74dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="TNP Music"
+            android:textColor="@color/gray"
+            android:layout_gravity="center"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/group_mail"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/custom_input_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLogin">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mail" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/gray"
+            android:hint="Nhập email" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_password"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/custom_input_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_mail">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/lock" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/gray"
+            android:hint="Nhập mật khẩu" />
+
+
+    </LinearLayout>
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="52dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textFieldPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldPassword" />
-
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_password" />
 
     <TextView
         android:id="@+id/textView4"
@@ -25,102 +112,31 @@
         app:layout_constraintTop_toTopOf="@+id/checkBox"
         app:layout_constraintVertical_bias="0.517" />
 
+
     <TextView
         android:id="@+id/textLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="Đăng nhập"
+        android:layout_marginTop="120dp"
+        android:text="Đăng Nhập"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldUsername"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/custom_input_login"
-        android:padding="5dp"
-        android:hint="Tên đăng nhập"
-        app:boxStrokeWidth="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin"
-        app:startIconDrawable="@drawable/user">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="text"
-            android:paddingStart="50dp"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldPassword"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/custom_input_login"
-        android:hint="Nhập mật khẩu"
-        android:padding="5dp"
-        app:boxStrokeWidth="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldUsername"
-        app:startIconDrawable="@drawable/lock">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="text"
-            android:paddingStart="50dp"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="65dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="88dp"
         android:text="Đăng nhập"
-        app:layout_constraintEnd_toEndOf="@+id/textFieldPassword"
+        app:layout_constraintEnd_toEndOf="@id/group_password"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textFieldPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldPassword" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="65dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@color/gray"
-        android:text="TNP Music"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="@id/group_password"
+        app:layout_constraintTop_toBottomOf="@id/group_password" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -131,6 +147,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
