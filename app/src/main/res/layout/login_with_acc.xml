@@ -53,7 +53,7 @@
             android:src="@drawable/mail" />
 
         <EditText
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@color/gray"
@@ -83,11 +83,18 @@
             android:src="@drawable/lock" />
 
         <EditText
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@color/gray"
             android:hint="Nhập mật khẩu" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/hide"
+            android:layout_gravity="center"
+
+            />
 
 
     </LinearLayout>

@@ -53,7 +53,7 @@
             android:src="@drawable/user" />
 
         <EditText
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@color/gray"
@@ -83,7 +83,7 @@
             android:src="@drawable/mail" />
 
         <EditText
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@color/gray"
@@ -113,7 +113,7 @@
             android:src="@drawable/lock" />
 
         <EditText
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@color/gray"
@@ -122,7 +122,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src=""
+            android:src="@drawable/hide"
+            android:layout_gravity="center"
             />
 
 
